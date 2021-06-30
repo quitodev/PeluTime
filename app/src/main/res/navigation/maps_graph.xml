@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/maps_graph"
+    app:startDestination="@id/fragmentMaps">
+
+    <fragment
+        android:id="@+id/fragmentMaps"
+        android:name="com.pelutime.ui.main.maps.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps">
+        <action
+            android:id="@+id/action_mapsFragment_to_mapsDialogFragment"
+            app:destination="@id/mapsDialogFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <dialog
+        android:id="@+id/mapsDialogFragment"
+        android:name="com.pelutime.ui.main.maps.dialogs.MapsDialogFragment"
+        android:label="fragment_maps_dialog"
+        tools:layout="@layout/fragment_maps_dialog"/>
+
+</navigation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/usersHomeFragment"
+        android:title="Inicio"
+        android:icon="@drawable/ic_home"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/usersBookingFragment"
+        android:title="Reservas"
+        android:icon="@drawable/ic_booking"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/usersAccountFragment"
+        android:title="Perfil"
+        android:icon="@drawable/ic_account"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/usersUbicationFragment"
+        android:title="Local"
+        android:icon="@drawable/ic_ubication"
+        tools:ignore="HardcodedText" />
+</menu>

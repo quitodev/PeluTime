@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/users_graph"
+    app:startDestination="@id/usersHomeFragment">
+
+    <fragment
+        android:id="@+id/usersHomeFragment"
+        android:name="com.pelutime.ui.main.users.home.UsersHomeFragment"
+        android:label="fragment_users_home"
+        tools:layout="@layout/fragment_users_home">
+        <action
+            android:id="@+id/action_usersHomeFragment_to_usersHomeEmployeeFragment"
+            app:destination="@id/usersHomeEmployeeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_usersHomeFragment_to_usersHomeConfirmFragment"
+            app:destination="@id/usersHomeConfirmFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_usersHomeFragment_to_usersHomeDeleteFragment"
+            app:destination="@id/usersHomeDeleteFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/action_usersHomeFragment_to_usersBookingFragment"
+            app:destination="@id/usersBookingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/usersBookingFragment"
+        android:name="com.pelutime.ui.main.users.booking.UsersBookingFragment"
+        android:label="fragment_users_booking"
+        tools:layout="@layout/fragment_users_booking">
+        <action
+            android:id="@+id/action_usersBookingFragment_to_usersBookingEmployeeFragment"
+            app:destination="@id/usersBookingEmployeeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_usersBookingFragment_to_usersBookingConfirmFragment"
+            app:destination="@id/usersBookingConfirmFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/action_usersBookingFragment_to_usersAccountFragment"
+            app:destination="@id/usersAccountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/usersAccountFragment"
+        android:name="com.pelutime.ui.main.users.account.UsersAccountFragment"
+        android:label="fragment_users_account"
+        tools:layout="@layout/fragment_users_account">
+        <action
+            android:id="@+id/action_usersAccountFragment_to_usersUbicationFragment"
+            app:destination="@id/usersUbicationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/usersUbicationFragment"
+        android:name="com.pelutime.ui.main.users.ubication.UsersUbicationFragment"
+        android:label="fragment_users_ubication"
+        tools:layout="@layout/fragment_users_ubication">
+        <action
+            android:id="@+id/action_usersUbicationFragment_to_usersUbicationDialogFragment"
+            app:destination="@id/usersUbicationDialogFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <dialog
+        android:id="@+id/usersHomeEmployeeFragment"
+        android:name="com.pelutime.ui.main.users.home.dialogs.UsersHomeEmployeeFragment"
+        android:label="fragment_users_home_employee_dialog"
+        tools:layout="@layout/fragment_users_home_employee_dialog"/>
+    <dialog
+        android:id="@+id/usersHomeConfirmFragment"
+        android:name="com.pelutime.ui.main.users.home.dialogs.UsersHomeConfirmFragment"
+        android:label="fragment_users_home_confirm_dialog"
+        tools:layout="@layout/fragment_users_home_confirm_dialog"/>
+    <dialog
+        android:id="@+id/usersHomeDeleteFragment"
+        android:name="com.pelutime.ui.main.users.home.dialogs.UsersHomeDeleteFragment"
+        android:label="fragment_users_home_delete_dialog"
+        tools:layout="@layout/fragment_users_home_delete_dialog"/>
+
+    <dialog
+        android:id="@+id/usersBookingEmployeeFragment"
+        android:name="com.pelutime.ui.main.users.booking.dialogs.UsersBookingEmployeeFragment"
+        android:label="fragment_users_booking_employee_dialog"
+        tools:layout="@layout/fragment_users_booking_employee_dialog"/>
+    <dialog
+        android:id="@+id/usersBookingConfirmFragment"
+        android:name="com.pelutime.ui.main.users.booking.dialogs.UsersBookingConfirmFragment"
+        android:label="fragment_users_booking_confirm_dialog"
+        tools:layout="@layout/fragment_users_booking_confirm_dialog"/>
+
+    <dialog
+        android:id="@+id/usersUbicationDialogFragment"
+        android:name="com.pelutime.ui.main.users.ubication.dialogs.UsersUbicationDialogFragment"
+        android:label="fragment_users_ubication_dialog"
+        tools:layout="@layout/fragment_users_ubication_dialog"/>
+
+</navigation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/adminHomeFragment"
+        android:title="Inicio"
+        android:icon="@drawable/ic_home"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/adminEmployeesFragment"
+        android:title="Personal"
+        android:icon="@drawable/ic_employees"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/adminAccountFragment"
+        android:title="Perfil"
+        android:icon="@drawable/ic_account"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/adminUbicationFragment"
+        android:title="Local"
+        android:icon="@drawable/ic_ubication"
+        tools:ignore="HardcodedText" />
+</menu>
