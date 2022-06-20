@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#D6D6D6"
+    tools:context=".ui.main.users.ubication.dialogs.UsersUbicationDialogFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textSize="24sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                tools:text="Nombre del local" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardImage"
+                android:layout_width="240dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="15dp"
+                android:visibility="invisible"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:id="@+id/imageUbication"
+                    android:layout_width="240dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Dirección"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textAddress"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                tools:text="Dirección del local" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Horarios"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textSchedule"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                tools:text="Horarios del local" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Teléfono"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textPhone"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                tools:text="Teléfono del local" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Sitio Web"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textWebsite"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                tools:text="Sitio del local" />
+
+            <RelativeLayout
+                android:layout_width="250dp"
+                android:layout_height="75dp"
+                android:gravity="center_horizontal"
+                android:paddingTop="25dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardClose"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardCornerRadius="7dp"
+                    app:cardElevation="4dp">
+                    <TextView
+                        android:id="@+id/textClose"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="CERRAR"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText" />
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/viewEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone"
+        android:focusable="true" />
+
+    <RelativeLayout
+        android:id="@+id/layoutImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.9"
+            android:background="@color/colorPrimaryDark"/>
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/photoView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+        <ImageView
+            android:id="@+id/imageClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_close"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+</FrameLayout>

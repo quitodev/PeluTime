@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#D6D6D6"
+    tools:context=".ui.main.admin.employees.dialogs.AdminEmployeesUpdateFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agregar personal"
+                android:textSize="24sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Nombre"
+                android:textColor="@color/colorPrimaryDark"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:hint="Nombre del personal"
+                android:inputType="textPersonName"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                tools:ignore="AutoFill,HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Sección"
+                android:textColor="@color/colorPrimaryDark"
+                tools:ignore="HardcodedText" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardCutsOff"
+                    android:layout_width="160dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardCornerRadius="7dp"
+                    app:cardElevation="4dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Cortes y peinados"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardTinctureOff"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:layout_toEndOf="@id/cardCutsOff"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardCornerRadius="7dp"
+                    app:cardElevation="4dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Tintura"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardManicureOff"
+                    android:layout_width="110dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/cardCutsOff"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardCornerRadius="7dp"
+                    app:cardElevation="4dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Manicura"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardTreatmentsOff"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/cardTinctureOff"
+                    android:layout_toEndOf="@id/cardManicureOff"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardCornerRadius="7dp"
+                    app:cardElevation="4dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Tratamientos"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardCutsOn"
+                    android:layout_width="160dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:visibility="invisible"
+                    app:cardBackgroundColor="#009688"
+                    app:cardCornerRadius="7dp"
+                    app:cardElevation="4dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Cortes y peinados"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardTinctureOn"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:layout_toEndOf="@id/cardCutsOff"
+                    android:visibility="invisible"
+                    app:cardBackgroundColor="#009688"
+                    app:cardCornerRadius="7dp"
+                    app:cardElevation="4dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Tintura"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardManicureOn"
+                    android:layout_width="110dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/cardCutsOff"
+                    android:visibility="invisible"
+                    app:cardBackgroundColor="#009688"
+                    app:cardCornerRadius="7dp"
+                    app:cardElevation="4dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Manicura"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardTreatmentsOn"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/cardTinctureOff"
+                    android:layout_toEndOf="@id/cardManicureOff"
+                    android:visibility="invisible"
+                    app:cardBackgroundColor="#009688"
+                    app:cardCornerRadius="7dp"
+                    app:cardElevation="4dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Tratamientos"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText" />
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Experiencia"
+                android:textColor="@color/colorPrimaryDark"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/editExperiences"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:hint="Experiencia del personal"
+                android:inputType="textPersonName"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                tools:ignore="AutoFill,HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Hobbies"
+                android:textColor="@color/colorPrimaryDark"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/editHobbies"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:hint="Hobbies del personal"
+                android:inputType="textPersonName"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                tools:ignore="AutoFill,HardcodedText" />
+
+            <RelativeLayout
+                android:layout_width="250dp"
+                android:layout_height="130dp"
+                android:gravity="center_horizontal"
+                android:paddingTop="25dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardConfirm"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardCornerRadius="7dp"
+                    app:cardElevation="4dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="CONFIRMAR"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardClose"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/cardConfirm"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardCornerRadius="7dp"
+                    app:cardElevation="4dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="CERRAR"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText" />
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/layoutProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone">
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:alpha="0.9"
+            app:cardBackgroundColor="@color/colorPrimaryDark"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="4dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Por favor, no salga de esta pantalla hasta que finalice la operación. Puede demorar hasta 1 minuto..."
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutDone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_dialog_ok" />
+    </RelativeLayout>
+
+</FrameLayout>

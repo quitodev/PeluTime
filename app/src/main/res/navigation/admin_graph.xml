@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/admin_graph"
+    app:startDestination="@id/adminHomeFragment">
+
+    <fragment
+        android:id="@+id/adminHomeFragment"
+        android:name="com.pelutime.ui.main.admin.home.AdminHomeFragment"
+        android:label="fragment_admin_home"
+        tools:layout="@layout/fragment_admin_home">
+        <action
+            android:id="@+id/action_adminHomeFragment_to_adminHomeDialogFragment"
+            app:destination="@id/adminHomeDialogFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/action_adminHomeFragment_to_adminEmployeesFragment"
+            app:destination="@id/adminEmployeesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminEmployeesFragment"
+        android:name="com.pelutime.ui.main.admin.employees.AdminEmployeesFragment"
+        android:label="fragment_admin_employees"
+        tools:layout="@layout/fragment_admin_employees">
+        <action
+            android:id="@+id/action_adminEmployeesFragment_to_adminEmployeesUpdateFragment"
+            app:destination="@id/adminEmployeesUpdateFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_adminEmployeesFragment_to_adminEmployeesNewFragment"
+            app:destination="@id/adminEmployeesNewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/action_adminEmployeesFragment_to_adminAccountFragment"
+            app:destination="@id/adminAccountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminAccountFragment"
+        android:name="com.pelutime.ui.main.admin.account.AdminAccountFragment"
+        android:label="fragment_admin_account"
+        tools:layout="@layout/fragment_admin_account">
+        <action
+            android:id="@+id/action_adminAccountFragment_to_adminUbicationFragment"
+            app:destination="@id/adminUbicationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminUbicationFragment"
+        android:name="com.pelutime.ui.main.admin.ubication.AdminUbicationFragment"
+        android:label="fragment_admin_ubication"
+        tools:layout="@layout/fragment_admin_ubication">
+    </fragment>
+
+    <dialog
+        android:id="@+id/adminHomeDialogFragment"
+        android:name="com.pelutime.ui.main.admin.home.dialogs.AdminHomeDialogFragment"
+        android:label="fragment_admin_home_dialog"
+        tools:layout="@layout/fragment_admin_home_dialog"/>
+
+    <dialog
+        android:id="@+id/adminEmployeesUpdateFragment"
+        android:name="com.pelutime.ui.main.admin.employees.dialogs.AdminEmployeesUpdateFragment"
+        android:label="fragment_admin_employees_update_dialog"
+        tools:layout="@layout/fragment_admin_employees_update_dialog"/>
+    <dialog
+        android:id="@+id/adminEmployeesNewFragment"
+        android:name="com.pelutime.ui.main.admin.employees.dialogs.AdminEmployeesNewFragment"
+        android:label="fragment_admin_employees_new_dialog"
+        tools:layout="@layout/fragment_admin_employees_new_dialog"/>
+
+</navigation>
